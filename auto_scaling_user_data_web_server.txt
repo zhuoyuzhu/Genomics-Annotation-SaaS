@@ -1,0 +1,10 @@
+#!/bin/bash -ex
+cd /home/ubuntu
+wget https://s3.amazonaws.com/mpcs-students/zhuoyuzhu/mpcs.zip
+unzip mpcs.zip
+# Change ownership from root
+chown -R ubuntu:ubuntu /home/ubuntu/mpcs/
+# Run server file
+chmod +x /home/ubuntu/mpcs/run_gas.sh
+cd mpcs
+/home/ubuntu/mpcs/run_gas.sh
